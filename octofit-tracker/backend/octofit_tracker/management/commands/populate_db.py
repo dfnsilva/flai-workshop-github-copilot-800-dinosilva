@@ -18,12 +18,12 @@ class Command(BaseCommand):
         # Create superhero users
         self.stdout.write('Creating users...')
         users_data = [
-            {'username': 'ironman', 'email': 'ironman@avengers.com', 'password': 'tony1234'},
-            {'username': 'spiderman', 'email': 'spiderman@avengers.com', 'password': 'peter1234'},
-            {'username': 'blackwidow', 'email': 'blackwidow@avengers.com', 'password': 'natasha1234'},
-            {'username': 'batman', 'email': 'batman@dc.com', 'password': 'bruce1234'},
-            {'username': 'superman', 'email': 'superman@dc.com', 'password': 'clark1234'},
-            {'username': 'wonderwoman', 'email': 'wonderwoman@dc.com', 'password': 'diana1234'},
+            {'username': 'ironman',     'first_name': 'Tony',    'last_name': 'Stark',    'email': 'ironman@avengers.com',     'password': 'tony1234'},
+            {'username': 'spiderman',   'first_name': 'Peter',   'last_name': 'Parker',   'email': 'spiderman@avengers.com',   'password': 'peter1234'},
+            {'username': 'blackwidow',  'first_name': 'Natasha', 'last_name': 'Romanoff', 'email': 'blackwidow@avengers.com',  'password': 'natasha1234'},
+            {'username': 'batman',      'first_name': 'Bruce',   'last_name': 'Wayne',    'email': 'batman@dc.com',            'password': 'bruce1234'},
+            {'username': 'superman',    'first_name': 'Clark',   'last_name': 'Kent',     'email': 'superman@dc.com',          'password': 'clark1234'},
+            {'username': 'wonderwoman', 'first_name': 'Diana',   'last_name': 'Prince',   'email': 'wonderwoman@dc.com',       'password': 'diana1234'},
         ]
         users = {}
         for ud in users_data:
@@ -60,12 +60,12 @@ class Command(BaseCommand):
         # Create leaderboard entries
         self.stdout.write('Creating leaderboard...')
         leaderboard_data = [
-            {'user': 'ironman', 'score': 950},
-            {'user': 'spiderman', 'score': 870},
-            {'user': 'blackwidow', 'score': 920},
-            {'user': 'batman', 'score': 980},
-            {'user': 'superman', 'score': 1000},
-            {'user': 'wonderwoman', 'score': 960},
+            {'user': 'ironman',     'score': 950,  'calories': 1850.0},
+            {'user': 'spiderman',   'score': 870,  'calories': 1420.5},
+            {'user': 'blackwidow',  'score': 920,  'calories': 1760.0},
+            {'user': 'batman',      'score': 980,  'calories': 1980.0},
+            {'user': 'superman',    'score': 1000, 'calories': 2400.0},
+            {'user': 'wonderwoman', 'score': 960,  'calories': 2100.5},
         ]
         for ld in leaderboard_data:
             Leaderboard.objects.create(**ld)

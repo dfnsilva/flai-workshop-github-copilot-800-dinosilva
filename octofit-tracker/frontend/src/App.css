@@ -1,0 +1,167 @@
+/* ── Global ─────────────────────────────────────────────────── */
+body {
+  background-color: #f0f2f5;
+  color: #212529;
+}
+
+/* ── Navbar ─────────────────────────────────────────────────── */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: #61dafb !important;
+}
+
+/* ── Hero / Home ─────────────────────────────────────────────── */
+.octofit-hero {
+  background: linear-gradient(135deg, #1e3a5f 0%, #282c34 100%);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.octofit-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.octofit-hero .lead {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+.octofit-hero .badge-feature {
+  background-color: rgba(97, 218, 251, 0.18);
+  color: #61dafb;
+  border: 1px solid #61dafb;
+  border-radius: 2rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ── Cards ───────────────────────────────────────────────────── */
+.octofit-card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.09);
+  overflow: hidden;
+}
+
+.octofit-card .card-header {
+  background: linear-gradient(90deg, #1e3a5f 0%, #2c3e50 100%);
+  color: #fff;
+  border-bottom: none;
+  padding: 1rem 1.5rem;
+}
+
+.octofit-card .card-header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.octofit-card .card-body {
+  padding: 0;
+}
+
+/* ── Tables ──────────────────────────────────────────────────── */
+.octofit-card .table {
+  margin-bottom: 0;
+}
+
+.octofit-card .table thead th {
+  background-color: #f8f9fa;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  padding: 0.85rem 1.25rem;
+}
+
+.octofit-card .table tbody td {
+  padding: 0.85rem 1.25rem;
+  vertical-align: middle;
+  font-size: 0.95rem;
+}
+
+.octofit-card .table-hover tbody tr:hover {
+  background-color: #eaf2ff;
+  cursor: default;
+}
+
+/* ── Leaderboard ranks ───────────────────────────────────────── */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.rank-1  { background-color: #ffd700; color: #7a5800; }
+.rank-2  { background-color: #c0c0c0; color: #4a4a4a; }
+.rank-3  { background-color: #cd7f32; color: #fff; }
+.rank-other { background-color: #e9ecef; color: #495057; }
+
+/* ── Badges / Pills ──────────────────────────────────────────── */
+.member-badge {
+  display: inline-block;
+  background-color: #e7f1ff;
+  color: #0d6efd;
+  border: 1px solid #b6d0fe;
+  border-radius: 2rem;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin: 2px;
+}
+
+.exercise-badge {
+  display: inline-block;
+  background-color: #e8f8f0;
+  color: #198754;
+  border: 1px solid #a3d9c0;
+  border-radius: 2rem;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin: 2px;
+}
+
+/* ── Loading / Alerts ────────────────────────────────────────── */
+.octofit-loading {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #6c757d;
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.octofit-footer {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #9aa0a8;
+  padding: 2rem 0 1rem;
+}

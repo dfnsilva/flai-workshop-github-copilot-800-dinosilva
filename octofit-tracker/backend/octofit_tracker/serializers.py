@@ -7,7 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'password']
+        fields = ['id', 'username', 'first_name', 'last_name', 'email', 'password']
 
     def get_id(self, obj):
         return str(obj.pk)
@@ -40,7 +40,7 @@ class LeaderboardSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Leaderboard
-        fields = ['id', 'user', 'score']
+        fields = ['id', 'user', 'score', 'calories']
 
     def get_id(self, obj):
         return str(obj.pk)

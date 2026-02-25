@@ -27,7 +27,7 @@ def api_root(request):
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
+    queryset = User.objects.all().order_by('username')
     serializer_class = UserSerializer
 
 
