@@ -15,6 +15,8 @@ router.register(r'activities', ActivityViewSet)
 router.register(r'leaderboard', LeaderboardViewSet)
 router.register(r'workouts', WorkoutViewSet)
 
+# Build the base URL using CODESPACE_NAME so all API links use the correct
+# Codespace HTTPS URL rather than a hardcoded localhost address.
 codespace_name = os.environ.get('CODESPACE_NAME')
 if codespace_name:
     base_url = f"https://{codespace_name}-8000.app.github.dev"
@@ -23,7 +25,9 @@ else:
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Root and /api/ both serve the custom api_root that returns codespace-aware URLs
     path('', api_root, name='api-root'),
-    path('api/', api_root, name='api-root-api'),
+    path('api/', api_root, name='api-root-prefix'),
+    # Router handles all /api/<resource>/ endpoints
     path('api/', include(router.urls)),
 ]
